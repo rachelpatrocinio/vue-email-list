@@ -6,6 +6,7 @@ createApp({
     data(){
         return{
             emails: [],
+            nEmail: 10,
             numbers: []
         }
     },
@@ -35,7 +36,7 @@ createApp({
         }
     },
     created(){
-        this.generateEmails(10)
+        this.generateEmails(this.nEmail)
         this.generateNumbers(5)
     }
 }).mount('#app')
