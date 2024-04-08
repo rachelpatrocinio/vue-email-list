@@ -1,0 +1,11 @@
+ul{
+    list-style: none;
+}
+
+.odd{
+    color: blueviolet;
+}
+
+.even{
+    color: gold;
+}

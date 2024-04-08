@@ -4,14 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="./css/style.css">
     <title>Document</title>
 </head>
 <body>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <div id="app">
+        <!-- GENERATE 10 EMAILS -->
         <ol>
             <li v-if="emails.length === 10" v-for="email in emails">{{ email }}</li>
         </ol>
+        <hr>
+        <!-- GENERATE NUMBERS % 2 === 0 -->
+        <ul>
+            <li v-for="number in numbers" :class="number % 2 === 0 ? 'even': 'odd'">{{ number }} </li>
+        </ul>
     </div>
     <script src="./js/app.js"></script>
 </body>
