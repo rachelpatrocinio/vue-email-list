@@ -9,7 +9,9 @@
 <body>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <div id="app">
-        
+        <ol>
+            <li v-for="email in emails">{{ email }}</li>
+        </ol>
     </div>
     <script src="./js/app.js"></script>
 </body>

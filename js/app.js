@@ -9,17 +9,19 @@ createApp({
         }
     },
     methods:{
-        generateEmails(){
-            axios
+        generateEmails(nEmail){
+            for(let i = 0; i < nEmail; i++){
+                axios
                 .get('https://flynn.boolean.careers/exercises/api/random/mail')
                 .then((response) =>{
-                    console.log(response.data.response)
-                    this.emails.push(response.data.response)
-                    console.log(this.emails)
+                    const generatedEmail = response.data.response
+                    this.emails.push(generatedEmail)
+                    // console.log(this.emails)
                 })
+            } 
         }
     },
     created(){
-        this.generateEmails()
+        this.generateEmails(10)
     }
 }).mount('#app')
