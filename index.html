@@ -12,7 +12,9 @@
     <div id="app">
         <!-- GENERATE 10 EMAILS -->
         <ol>
-            <li v-if="emails.length === nEmail" v-for="email in emails">{{ email }}</li>
+            <template v-for="email in emails">
+                <li v-if="emails.length === nEmail" >{{ email }}</li>
+            </template>
         </ol>
         <hr>
         <!-- GENERATE NUMBERS % 2 === 0 -->
